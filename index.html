@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Питание — программа для похудения</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🥗 Моя программа питания</h1>
+  <p class="hello">Привет, кисик 💕</p>
+  <nav id="tabs">
+    <button data-tab="profile" class="active">Параметры</button>
+    <button data-tab="plan">План</button>
+    <button data-tab="menu">Меню</button>
+    <button data-tab="shop">Покупки</button>
+    <button data-tab="progress">Прогресс</button>
+  </nav>
+</header>
+
+<main>
+  <section id="tab-profile" class="tab active">
+    <form id="form" class="card">
+      <h2>Расскажи о себе</h2>
+      <div class="grid">
+        <label>Возраст, лет<input name="age" type="number" min="14" max="80" value="28" required></label>
+        <label>Рост, см<input name="height" type="number" min="130" max="210" value="165" required></label>
+        <label>Текущий вес, кг<input name="weight" type="number" min="35" max="250" step="0.1" value="70" required></label>
+        <label>Желаемый вес, кг<input name="goal" type="number" min="35" max="250" step="0.1" value="60" required></label>
+      </div>
+      <label>Активность
+        <select name="activity">
+          <option value="1.2">Сидячий образ жизни, без тренировок</option>
+          <option value="1.375" selected>Лёгкая: 1–3 тренировки в неделю</option>
+          <option value="1.55">Средняя: 3–5 тренировок в неделю</option>
+          <option value="1.725">Высокая: 6–7 тренировок в неделю</option>
+        </select>
+      </label>
+      <label>Темп похудения
+        <select name="pace">
+          <option value="0.10">Спокойный (дефицит 10%)</option>
+          <option value="0.15" selected>Умеренный (дефицит 15%)</option>
+          <option value="0.20">Быстрый (дефицит 20%)</option>
+        </select>
+      </label>
+      <label>Приёмов пищи в день
+        <select name="meals">
+          <option value="3">3 (завтрак, обед, ужин)</option>
+          <option value="4" selected>4 (+ перекус)</option>
+          <option value="5">5 (+ два перекуса)</option>
+        </select>
+      </label>
+      <fieldset>
+        <legend>Исключить из меню</legend>
+        <label class="chk"><input type="checkbox" name="ex" value="meat">мясо и птицу</label>
+        <label class="chk"><input type="checkbox" name="ex" value="fish">рыбу и морепродукты</label>
+        <label class="chk"><input type="checkbox" name="ex" value="dairy">молочные продукты</label>
+        <label class="chk"><input type="checkbox" name="ex" value="egg">яйца</label>
+        <label class="chk"><input type="checkbox" name="ex" value="gluten">глютен</label>
+        <label class="chk"><input type="checkbox" name="ex" value="nuts">орехи</label>
+      </fieldset>
+      <button class="primary" type="submit">Составить программу</button>
+    </form>
+  </section>
+
+  <section id="tab-plan" class="tab"></section>
+  <section id="tab-menu" class="tab"></section>
+  <section id="tab-shop" class="tab"></section>
+  <section id="tab-progress" class="tab"></section>
+</main>
+
+<footer>Приложение носит справочный характер и не заменяет консультацию врача или диетолога. При хронических заболеваниях, беременности и лактации согласуй питание со специалистом.</footer>
+
+<script src="foods.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
